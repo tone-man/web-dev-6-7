@@ -1,0 +1,15 @@
+{
+  "name": "web-dev-6-7",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "nodemon server/index.js",
+    "start": "node server/index.js"
+  },
+  "author": "Antonio Craveiro",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
