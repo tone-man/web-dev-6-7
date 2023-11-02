@@ -92,13 +92,13 @@ function handleAssets(req, res) {
 
     if (req.method == "GET") {
         //Generate the dir so I can access the file types
-        const assetsDir = path.join(__dirname, urlPath);
+        const assetPath = path.join(__dirname, req.url);
 
-        fs.readFile(req.pathname, (err, data) => {
+        fs.readFile(assetPath, (err, data) => {
             if (err) {
                 sendNotFound(res);
             } else {
-                const ext = path.extname(assetPath);
+                const ext = assetPath.extname(assetPath);
                 let contentType = 'text/plain';
 
                 switch (ext) {
